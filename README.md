@@ -11,6 +11,7 @@ Created EC2 instance. Generated key and used below command to connect to EC2 via
 ssh -i "Kafka-news-election-project.pem" ec2-user@ec2-54-176-63-70.us-west-1.compute.amazonaws.com
 
 Connected to EC2 machine, 
+
 <img width="468" alt="image" src="https://github.com/vaidehipatel05/Predicting-election-outcome-based-on-news-articles/assets/152042524/a6adc48a-abd1-4b50-9444-950552802fc8">
 
 Downloaded Kafka using below command,
@@ -45,5 +46,17 @@ bin/kafka-console-producer.sh --topic demo_testing2 --bootstrap-server 18.144.34
 
 Started Consumer:
 bin/kafka-console-consumer.sh --topic demo_testing2 --bootstrap-server 18.144.34.135:9092
+
+Edited KafkaProducer.ipynb file to fetch data from API and let the consumer consume it.
+
+<img width="954" alt="image" src="https://github.com/vaidehipatel05/Predicting-election-outcome-based-on-news-articles/assets/152042524/93c787ea-6fcc-4fdd-95f4-00a2172368a2">
+
+
+Created S3 bucket,
+Kafka-news-election-project-bd
+
+Now we want data to be uplaoded to S3 from code. For that we used package s3fs
+
+
 
 
